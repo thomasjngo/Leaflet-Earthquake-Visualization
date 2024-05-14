@@ -32,7 +32,7 @@ fetch(url)
             }
             
             L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-                radius: mag * 2,
+                radius: mag * 3,
                 fillColor: color,
                 color: 'black',
                 weight: 1,
@@ -46,14 +46,14 @@ fetch(url)
         legend.onAdd = function () {
             var div = L.DomUtil.create('div', 'info legend');
             div.style.backgroundColor = 'white';
-            div.style.padding = '10px';
-            div.innerHTML = '<h4> Depth Legend </h4>' +
-                '<i class="square" style="background: lime;"></i><10 km <br>' +
-                '<i class="square" style="background: greenyellow;"></i>10-30 km <br>' +
-                '<i class="square" style="background: yellow;"></i>>30-50 km<br>'+
-                '<i class="square" style="background: orange;"></i>>50-70 km<br>'+
-                '<i class="square" style="background: darkorange;"></i>>70-90 km<br>'+
-                '<i class="square" style="background: red;"></i>>90+ km';
+            div.style.padding = '15px';
+            div.innerHTML = '<h2>Depth (km)</h2>' +
+                '<i class="square" style="background: lime;"></i><10<br>' +
+                '<i class="square" style="background: greenyellow;"></i>10-30<br>' +
+                '<i class="square" style="background: yellow;"></i>>30-50<br>'+
+                '<i class="square" style="background: orange;"></i>>50-70<br>'+
+                '<i class="square" style="background: darkorange;"></i>>70-90<br>'+
+                '<i class="square" style="background: red;"></i>>90+';
 
             // Style for the colored squares
             var style = document.createElement('style');
