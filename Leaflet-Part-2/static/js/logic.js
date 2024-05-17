@@ -47,15 +47,15 @@ fetch(url)
             } else if (depth < 50) {
                 color = 'yellow';
             } else if (depth < 70) {
-                color = 'orange';
-            } else if (depth < 90) {
                 color = 'darkorange';
+            } else if (depth < 90) {
+                color = 'orangered';
             } else if (depth > 90) {
                 color = 'red';
             }
             
             L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
-                radius: mag * 3,
+                radius: mag * 4,
                 fillColor: color,
                 color: 'black',
                 weight: 1,
